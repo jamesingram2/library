@@ -1,0 +1,235 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+
+html {
+   font-family: "Poppins", sans-serif;
+}
+
+.navbar {
+   margin: 0 auto 20px;
+   width: 75%;
+}
+
+.navbar-brand {
+   text-shadow: 2px 2px 5px #021a31;
+   font-size: 30px;
+   line-height: 30px;
+   margin-right: 25px;
+}
+
+.navbar-brand img {
+   height: 40px;
+   margin-top: -8px;
+   margin-right: 5px;
+}
+
+.dropdown-menu h6 {
+   margin-left: 10px;
+}
+
+#body {
+   box-sizing: border-box;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   min-height: 100vh;
+   background: #0D6EFD;
+   transition: 0.5s;
+}
+
+#body.active {
+   background: #f43648;
+}
+
+#loginContainer {
+   position: relative;
+   width: 800px;
+   height: 500px;
+   margin: 20px;
+}
+
+.blueBg {
+   position: absolute;
+   top: 50px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+   height: 400px;
+   background: rgba(255, 255, 255, 0.2);
+   box-shadow: 0 5px 45px rgba(0, 0, 0, 0.15);
+}
+
+.blueBg .box {
+   position: relative;
+   width: 50%;
+   height: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
+
+.blueBg .box h2 {
+   color: #fff;
+   font-size: 1.2em;
+   font-weight: 500;
+   margin-bottom: 10px;
+}
+
+.blueBg .box button {
+   cursor: pointer;
+   padding: 10px 20px;
+   background: #fff;
+   color: #333;
+   font-size: 16px;
+   font-weight: 500;
+   border: none;
+}
+
+.formBx {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 50%;
+   height: 100%;
+   background: #fff;
+   z-index: 1000;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   box-shadow: 0 5p 45px rgba(0, 0, 0, 0.25);
+   transition: 0.5s ease-in-out;
+   overflow: hidden;
+}
+
+.formBx.active {
+   left: 50%;
+}
+
+.formBx .form {
+   position: absolute;
+   left: 0;
+   width: 100%;
+   padding: 50px;
+   transition: 0.5s;
+}
+
+.formBx .signinForm {
+   transition-delay: 0.25s;
+}
+
+.formBx.active .signinForm {
+   left: -100%;
+   transition-delay: 0s;
+}
+
+.formBx .signupForm {
+   left: 100%;
+   transition-delay: 0s;
+}
+
+.formBx.active .signupForm {
+   left: 0;
+   transition-delay: 0.25s;
+}
+
+.formBx .form form {
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+}
+
+.formBx .form form h3 {
+   font-size: 1.5em;
+   color: #333;
+   margin-bottom: 20px;
+   font-weight: 500;
+}
+
+.formBx .form form input {
+   width: 100%;
+   margin-bottom: 20px;
+   padding: 10px;
+   outline: none;
+   font-size: 16px;
+   border: 1px solid #333;
+}
+
+.formBx .form form input[type="submit"] {
+   background: #0D6EFD;
+   border: none;
+   color: #fff;
+   max-width: 100px;
+   cursor: pointer;
+}
+
+.formBx.active .signupForm input[type="submit"] {
+   background: #f43648;
+}
+
+.formBx .form form .forgot {
+   color: #333;
+}
+
+#carousel {
+   width: 75%;
+   margin: 0 auto;
+}
+
+#collection {
+   margin: 25px auto 0px;
+   padding-bottom: 500px;
+   width: 75%;
+   text-shadow: 2px 2px 5px #021a31;
+}
+
+#searchbar {
+   margin-top: 15px;
+   margin-bottom: 15px;
+   font-size: 16px;
+}
+
+#searchbar input {
+   font-size: 18px;
+   padding-left: 10px;
+   margin-right: 10px;
+   box-shadow: 2px 2px 10px #022649;
+}
+
+#advancedSearch {
+   margin: 10px;
+}
+
+
+@media (max-width: 991px) {
+   .loginContainer {
+      max-width: 400px;
+      height: 650px;
+      display: felx;
+      justify-content: center;
+      align-items: center;
+   }
+   .loginContainer .blueBg {
+      top: 0;
+      height: 100%;
+   }
+   .formBx {
+      width: 100%;
+      height: 500px;
+      top: 0;
+      box-shadow: none;
+   }
+   .blueBg .box {
+      position: absolute;
+      width: 100%;
+      height: 150px;
+      bottom: 0;
+   }
+   .box.signin {
+      top: 0;
+   }
+   .formBx.active {
+      left: 0;
+      top: 150px;
+   }
+}
